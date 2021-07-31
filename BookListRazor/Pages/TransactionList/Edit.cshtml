@@ -1,0 +1,150 @@
+﻿@page
+@model WarehouseMaster.Pages.TransactionList.EditModel
+@{ ViewData["Title"] = "Edit Transaction"; }
+<br />
+<h2 class="text-info">Edit Transaction</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+
+        <input type="hidden" asp-for="Transaction.TransactionId" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.TransactionDate"> Transaction Date</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.TransactionDate" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.TransactionDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.TransactionName"> Transaction Name</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.TransactionName" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.TransactionName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.TransactionDesc"> Transaction Description</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.TransactionDesc" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.TransactionDesc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.TransactionInvoiceRef"> Transaction Invoice/Ref#</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.TransactionInvoiceRef" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.TransactionInvoiceRef" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.ProductId">Product Id</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.ProductId" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.ProductId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.ProductName">Product Name</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.ProductName" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.ProductName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.InventoryInUnit">Inventory IN (Unit)</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.InventoryInUnit" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.InventoryInUnit" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.InventoryOutUnit">Inventory OUT (Unit) </label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.InventoryOutUnit" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.InventoryOutUnit" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.InventoryBalUnit">Inventory Balance (Unit)</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.InventoryBalUnit" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.InventoryBalUnit" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.ProductCostPricePU">Product Cost per Unit</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.ProductCostPricePU" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.ProductCostPricePU" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.ProductSellingPricePU">Product Selling Price Per Unit</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.ProductSellingPricePU" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.ProductSellingPricePU" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Transaction.InvBalCostPriceTotal"> Inventory Total Cost</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Transaction.InvBalCostPriceTotal" class="form-control" />
+            </div>
+            <span asp-validation-for="Transaction.InvBalCostPriceTotal" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

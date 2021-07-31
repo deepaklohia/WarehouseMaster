@@ -1,0 +1,68 @@
+﻿@page
+@model WarehouseMaster.Pages.CustomerList.EditModel
+@{ ViewData["Title"] = "Edit Customer"; }
+<br />
+<h2 class="text-info">Edit Customer</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+
+        <!--//hidden ID should be there in edit-->
+        <input type="hidden" asp-for="Customer.customerId" />
+
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Customer.customerName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Customer.customerName" class="form-control" />
+            </div>
+            <span asp-validation-for="Customer.customerName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Customer.customerAddress"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Customer.customerAddress" class="form-control" />
+            </div>
+            <span asp-validation-for="Customer.customerAddress" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Customer.customerPhone"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Customer.customerPhone" class="form-control" />
+            </div>
+            <span asp-validation-for="Customer.customerPhone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Customer.customerEmail"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Customer.customerEmail" class="form-control" />
+            </div>
+            <span asp-validation-for="Customer.customerEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

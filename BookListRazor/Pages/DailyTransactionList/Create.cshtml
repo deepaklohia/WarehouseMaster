@@ -1,0 +1,85 @@
+﻿@page
+@model WarehouseMaster.Pages.DailyTransactionList.CreateModel
+
+@{ ViewData["Title"] = "Record Transaction"; }
+<br />
+<h2 class="text-info">Record Transaction</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionDate">Transaction Date</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionDate" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionName"> Transaction Name</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionName" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionDetails"> Transaction Details</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionDetails" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionDetails" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionInAmt"> Transaction in Amount</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionInAmt" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionInAmt" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionOutAmt">Transaction Out Amt</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionOutAmt" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionOutAmt" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyTransaction.TransactionBalance">Remaining Balance</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyTransaction.TransactionBalance" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyTransaction.TransactionBalance" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": null,
+      "type": "secrets.user",
+      "connectionId": null,
+      "secretStore": null
+    }
+  }
+}
